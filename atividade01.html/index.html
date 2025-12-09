@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+</head>
+<body>
+    <p>Nome Completo</p>
+    <input type="text" id="nomecompleto">
+    <button type="button" onclick="separar()">>>></button>
+    <p id="nome">Nome: </p>
+    <p id="sobrenome">Sobrenome: </p>
+
+    <script>
+        function separar() {
+            var nomeCompleto = document.getElementById("nomecompleto").value;
+            var partes = nomeCompleto.split(" ");
+            var primeiroNome = partes[0];
+            var sobrenome = partes[partes.length - 1];
+            document.getElementById("nome").innerHTML = "Nome: " + primeiroNome;
+            document.getElementById("sobrenome").innerHTML = "Sobrenome: " + sobrenome;
+        }
+    </script>
+</body>
+</html>
